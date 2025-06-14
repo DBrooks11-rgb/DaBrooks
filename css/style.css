@@ -5,17 +5,65 @@ body{
 }
 
 /* .container {
-    margin: 50px auto;
     height: 100%;
     width: 100%;
 } */
 
+:root{
+    --blue: blue;
+    --charcoal: #36454F;
+    --merino: #f7f1df;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
 p, h1, h2, h3{
     color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2{
     text-align: center;
+}
+
+h1{
+    font-weight: 700;
+  font-style: italic;
+}
+
+/* BACKGROUND */
+#home {
+  /* border: 2px solid yellow; */
+  background-image: url("../images/business-background.png");
+  background: cover no-repeat;
+  background-size: 580px 800px;
+}
+.dots {
+  /* http://www.patternify.com/ */
+  /* border: 2px solid red; */
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACdJREFUGFdjZECAzQwMDL4gLiNUDCYApkGCMIH/UEWbcaqEmQo3EwC3VAi5z3Hg8QAAAABJRU5ErkJggg==) repeat;
+  display: flex;
+  justify-content: flex-end;
+}
+.container {
+  /* border: 2px solid blue; */
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  /* overflow-y: scroll; */
+}
+.box {
+    position: relative;
+    background-color: #36454F;
+    border: solid 3px #f7f1df;
+    margin-top: 5rem;
+    padding: 1em;
+    z-index: 10;
 }
 
 /* ANIMATION */
@@ -23,8 +71,8 @@ h1, h2{
     position: absolute;
     top: 0;
     color: #f7f1df;
-    /* color: aquamarine; */
     animation: animate 5s linear forwards;
+    z-index: 1;
 }
 
 .star::before{
@@ -51,4 +99,34 @@ h1, h2{
         transform: translateY(100vh) translateX(60vh) rotate(360deg);
         opacity: 0;
     }
+}
+
+/* MEDIA QUERIES */
+/* Default settings for size less than 576px*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    #home{
+        background-size: 800px 800px;
+    }
+  .container{
+    width: 75%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #home{
+        background-size: cover;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }

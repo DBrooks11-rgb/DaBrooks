@@ -4,10 +4,7 @@ function stars(){
     let e = document.createElement('div');
     e.setAttribute('class','star');
     document.body.appendChild(e);
-    e.style.left = Math.random() * (innerWidth*.8) + 'px';
-    // if (e.style.left < 15){
-    //     e.style.left = e.style.left * -1;
-    // }
+    e.style.left = Math.random() * (innerWidth*.75) + 'px';
 
     let size = Math.random() * 12;
     let duration = Math.random() * 3;
