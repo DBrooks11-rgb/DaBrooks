@@ -1,16 +1,11 @@
-body{
+body {
     background-color: black;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
-/* .container {
-    height: 100%;
-    width: 100%;
-} */
-
-:root{
-    --blue: blue;
+:root {
+    --teal: teal;
     --navy: navy;
     --black: black;
     --white: white;
@@ -18,81 +13,148 @@ body{
     --merino: #f7f1df;
     --gold: gold;
     --fuchsia: fuchsia;
+    --pastelpurple: #c3b1e1;
+    --coral: #ff4040;
+    /* unused */
     --darkmagenta: #8b008b;
     --darkgold: #b59410;
-
 }
+
+/* IMAGES */
+
 img {
-  display: block;
-  width: 100%;
-  height: 100vh;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 1rem;
+    border: solid 2px black;
 }
 
-p, h1, h2, h3{
+#profile {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+/* TEXT */
+
+p,
+h1,
+h2,
+h3 {
     color: white;
     font-family: "Faculty Glyphic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
-h1, h2{
+h1,
+h2 {
     text-align: center;
 }
 
-h1{
+h1 {
+    margin: 0 2em;
+    margin-top: 5rem;
+    border-bottom: solid 2px white;
+    padding-bottom: 1rem;
     font-size: 50px;
     font-weight: 700;
-  font-style: italic;
+    font-style: italic;
+    text-shadow: 5px 5px black;
+}
+
+h2 {
+    margin-top: .75em;
+    font-size: 35px;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+p {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* BACKGROUND */
+
 #home {
-  /* border: 2px solid yellow; */
-  background-image: url("../images/business-background.png");
-  background: cover no-repeat;
-  background-size: 580px 800px;
+    background-image: url("../images/business-background.png");
+    background: cover no-repeat;
+    background-size: 580px 800px;
+    /* border: 2px solid yellow; */
 }
+
 .dots {
-  /* http://www.patternify.com/ */
-  /* border: 2px solid red; */
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACdJREFUGFdjZECAzQwMDL4gLiNUDCYApkGCMIH/UEWbcaqEmQo3EwC3VAi5z3Hg8QAAAABJRU5ErkJggg==) repeat;
-  display: flex;
-  justify-content: flex-end;
+    /* http://www.patternify.com/ */
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACdJREFUGFdjZECAzQwMDL4gLiNUDCYApkGCMIH/UEWbcaqEmQo3EwC3VAi5z3Hg8QAAAABJRU5ErkJggg==) repeat;
+    /* border: 2px solid red; */
 }
+
+/* CONTAINERS */
+
 .container {
-  /* border: 2px solid blue; */
-  width: 100%;
-  height: 100vh;
-  margin-top: 5rem;
-  /* overflow-y: scroll; */
+    margin: 0 auto;
+    padding: 3rem 3rem 0 3rem;
+    min-width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    /* border: 2px solid blue; */
 }
+
+.article {
+    display: flex;
+}
+
 .box {
     position: relative;
     background-color: var(--charcoal);
+    border: solid 3px var(--merino);
+    margin: 5rem;
+    padding: 1em;
+    z-index: 10;
+}
+
+.fullbox {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--coral);
     border: solid 3px var(--merino);
     margin-top: 5rem;
     padding: 1em;
     z-index: 10;
 }
 
+.text {
+    margin-left: 1rem;
+}
+
+#intro {
+    z-index: 0;
+}
+
 /* NAVIGATION */
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
+
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 .openbtn {
@@ -102,43 +164,44 @@ h1{
     color: black;
     font-family: 'PT Sans', sans-serif;
 }
+
 .openbtn:hover {
     color: navy;
 }
+
 .menu-button {
     font-size: 36px !important;
     position: relative;
     top: 6px;
     left: -4px;
 }
+
 .menu-text {
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 12px;
     display: block;
 }
+
 ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     list-style-type: none;
 }
 
 /* The side navigation menu */
 nav {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: var(--merino);
-  box-shadow: 0 2px 5px white;
-  /* sticky: fix menu to top of viewport, PUSHES content down */
-  position: sticky;
-  /* fixed: fixes menu to top of viewport, APPEARS OVER content */
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  /* Width will need to be set to 100% when setting position */
-  width: 100%;
-  z-index: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--merino);
+    box-shadow: 0 5px 5px teal;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 /* .branding {
@@ -154,36 +217,39 @@ nav {
 } */
 
 nav ul {
-  margin: 0;
-  padding: 0;
-  /* menu items aligned horiz and to the right */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    margin: 0;
+    padding: 0;
+    /* menu items aligned horiz and to the right */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
 nav li {
-  /* remove bullet points */
-  list-style-type: none;
-  padding: 1.5rem;
+    /* remove bullet points */
+    list-style-type: none;
+    padding: 1.5rem;
 }
 
 nav a {
-  color: black;
-  font-size: 24px;
-  text-decoration: none;
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
 }
+
 nav a:hover {
-  color: fuchsia;
+    color: fuchsia;
 }
 
 .menu-button {
-  display: none;
-  padding: 1.5rem;
-  color: navy;
+    display: none;
+    padding: 1.5rem;
+    color: navy;
 }
+
 .menu-button:hover {
-  color: fuchsia;
-  cursor: pointer;
+    color: fuchsia;
+    cursor: pointer;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -194,7 +260,7 @@ nav a:hover {
 
 /* ANIMATION */
 
-.star{
+.star {
     position: absolute;
     top: 0;
     color: #f7f1df;
@@ -202,26 +268,30 @@ nav a:hover {
     z-index: 1;
 }
 
-.star::before{
+.star::before {
     content: '\f005';
     /* content: '\f111'; */
     font-family: fontAwesome;
     text-shadow: 0 0 5px midnightblue,
-    0 0 20px gold,
-    /* 0 0 20px blue, */
-    0 0 50px skyblue;
+        0 0 20px gold,
+        /* 0 0 20px blue, */
+        0 0 50px skyblue;
 }
+
 @keyframes animate {
     0% {
         transform: translateY(0) translateX(0) rotate(0deg);
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     80% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) translateX(60vh) rotate(360deg);
         opacity: 0;
@@ -232,76 +302,77 @@ nav a:hover {
 /* Default settings for size less than 576px*/
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    #home{
+@media (min-width: 576px) {
+    #home {
         background-size: 800px 800px;
     }
-  .container{
-    width: 75%;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    #home{
+    #home {
         background-size: cover;
+    }
+
+    .fullbox {
+        flex-flow: column wrap;
     }
 }
 
 /* For menu transition (handheld mode)*/
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
 
-  #box {
-    flex-flow: column wrap;
-  }
-  .menu-button {
-    /* turn on */
-    display: block;
-    visibility: visible;
-  }
-  .menu-item {
-    /* turn off */
-    /* display: none; */
+    #box {
+        flex-flow: column wrap;
+    }
 
-    /* turn off in another way in order to add transition */
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear;
+    .menu-button {
+        /* turn on */
+        display: block;
+        visibility: visible;
+    }
 
-    /* some styling when in dropdown mode */
-    background-color: snow;
-    text-align: right;
-    width: 100%;
-  }
+    .menu-item {
+        /* turn off */
+        /* display: none; */
 
-  .maincontainer {
-    flex-flow: row wrap;
-    margin: 2rem;
-    padding: 1rem;
-  }
+        /* turn off in another way in order to add transition */
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
+
+        /* some styling when in dropdown mode */
+        background-color: snow;
+        text-align: right;
+        width: 100%;
+    }
 }
 
 .dropdown {
-  /* class to add to show hidden menu items on click */
-  display: block;
-  /* add transition */
-  position: static;
-  visibility: visible;
-  opacity: 1;
+    /* class to add to show hidden menu items on click */
+    display: block;
+    /* add transition */
+    position: static;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    
+    .fullbox {
+        flex-flow: row wrap;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    .fullbox {
+        flex-flow: row nowrap;
+    }
 }
