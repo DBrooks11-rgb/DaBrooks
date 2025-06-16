@@ -1,0 +1,20 @@
+let open = document.querySelector('.open-menu');
+let close = document.querySelector('.close-menu');
+let menuOpen = false;
+
+function openMenu() {
+    open.style.display = 'none';
+    close.style.display = 'block';
+    menuOpen = true;
+    document.querySelectorAll('.menu-item').forEach((item) => item.classList.add('dropdown'));
+}
+function closeMenu() {
+    open.style.display = 'block';
+    close.style.display = 'none';
+    menuOpen = false;
+    document.querySelectorAll('.menu-item').forEach((item) => item.classList.remove('dropdown'));
+}
+
+document.addEventListener('DOMContentLoaded', () => closeMenu());
+window.addEventListener("resize", closeMenu);
+document.querySelector('.menu-button').addEventListener('click', () => (menuOpen) ? closeMenu() : openMenu());
