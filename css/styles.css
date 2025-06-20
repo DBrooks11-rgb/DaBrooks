@@ -345,7 +345,7 @@ nav a:active {
     }
 
     100% {
-        transform: translateY(100vh) translateX(50vh) rotate(360deg);
+        transform: translateY(100vh) translateX(25vh) rotate(360deg);
         opacity: 0;
     }
 }
@@ -429,6 +429,25 @@ nav a:active {
     .clearbox {
         flex-flow: column nowrap;
     }
+    @keyframes animate {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(50vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
