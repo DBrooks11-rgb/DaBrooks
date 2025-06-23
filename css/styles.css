@@ -26,7 +26,7 @@ img {
     width: 400px;
     height: 400px;
     margin-bottom: 1rem;
-    border: solid 2px black;
+    /* border: solid 2px black; */
 }
 
 #profile {
@@ -38,6 +38,7 @@ img {
 #best {
     width: 250px;
     height: 300px;
+    border-bottom: 2px solid black;
 }
 
 /* TEXT */
@@ -87,8 +88,26 @@ p {
     color: black;
 }
 
-#pro {
-    margin-top: 5rem;
+/* BUTTON */
+.button {
+  background-color: var(--merino);
+  color: black;
+  padding: 12px 28px;
+  text-align: center;
+  display: inline-block;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 14px;
+  box-shadow: 5px 5px black, -5px -5px white;
+  z-index: 10;
+}
+
+.button:hover {
+    background-color: gold;
+}
+
+.button:active {
+    background-color: var(--teal);
+    color: white;
 }
 
 /* BACKGROUND */
@@ -108,7 +127,7 @@ p {
 
 /* CONTAINERS */
 
-.container {
+.content-container {
     margin: 0 auto;
     padding: 3rem 3rem 0 3rem;
     min-width: 100%;
@@ -125,7 +144,7 @@ p {
     position: relative;
     background-color: var(--charcoal);
     border: solid 3px var(--merino);
-    margin: 5rem;
+    margin: 5rem 5rem 0 5rem;
     padding: 1em;
     z-index: 10;
 }
@@ -166,6 +185,23 @@ p {
     color: black;
     border-radius: 5%;
 }
+
+#project-line {
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    z-index: 50;
+} */
 
 .text {
     margin-left: 1rem;
@@ -239,7 +275,7 @@ li {
 nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--merino);
-    box-shadow: 0 5px 5px teal;
+    /* box-shadow: 0 5px 5px teal; */
     position: sticky;
     top: 0;
     left: 0;
@@ -256,8 +292,8 @@ nav {
 }
 
 #logo {
-    width: 60px;
-    height: 55px;
+    width: 70px;
+    height: 62px;
 }
 
 #logo:hover {
@@ -429,25 +465,26 @@ nav a:active {
     .clearbox {
         flex-flow: column nowrap;
     }
+
     @keyframes animate {
-    0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0;
-    }
+        0% {
+            transform: translateY(0) translateX(0) rotate(0deg);
+            opacity: 0;
+        }
 
-    10% {
-        opacity: 1;
-    }
+        10% {
+            opacity: 1;
+        }
 
-    80% {
-        opacity: 1;
-    }
+        80% {
+            opacity: 1;
+        }
 
-    100% {
-        transform: translateY(100vh) translateX(50vh) rotate(360deg);
-        opacity: 0;
+        100% {
+            transform: translateY(100vh) translateX(50vh) rotate(360deg);
+            opacity: 0;
+        }
     }
-}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -467,6 +504,6 @@ nav a:active {
 
     #best {
         width: 300px;
-        height: 500px;
+        height: 450px;
     }
 }

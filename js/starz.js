@@ -19,4 +19,4 @@ function stars(){
 
 setInterval(function(){
     stars()
-},200)
+},500)
