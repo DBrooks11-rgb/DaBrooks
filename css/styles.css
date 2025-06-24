@@ -4,6 +4,11 @@ body {
     overflow: hidden;
 }
 
+footer{
+    position: relative;
+    z-index: 50;
+}
+
 :root {
     --teal: teal;
     --navy: navy;
@@ -23,8 +28,8 @@ body {
 /* IMAGES */
 
 img {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     margin-bottom: 1rem;
     /* border: solid 2px black; */
 }
@@ -39,6 +44,22 @@ img {
     width: 250px;
     height: 300px;
     border-bottom: 2px solid black;
+}
+
+#verticalimg {
+    width: 350px;
+    height: 500px;
+}
+
+.invisibox img {
+    margin-top: .5em;
+    border: 2px solid var(--merino);
+}
+
+#footimg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 /* TEXT */
@@ -92,6 +113,7 @@ p {
 .button {
   background-color: var(--merino);
   color: black;
+  margin: 1rem;
   padding: 12px 28px;
   text-align: center;
   display: inline-block;
@@ -99,6 +121,10 @@ p {
   font-size: 14px;
   box-shadow: 5px 5px black, -5px -5px white;
   z-index: 10;
+}
+
+#nomargin {
+    margin: 0;
 }
 
 .button:hover {
@@ -153,7 +179,18 @@ p {
     text-align: center;
 }
 
-.fullbox {
+.imgbox {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--charcoal);
+    border: solid 3px var(--merino);
+    margin: 5rem 5rem 0 5rem;
+    padding: 1em;
+    z-index: 10;
+}
+
+.introbox {
     position: relative;
     display: flex;
     flex-flow: column wrap;
@@ -176,6 +213,16 @@ p {
     z-index: 10;
 }
 
+.invisibox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 0 auto 2rem auto;
+    z-index: 10;
+}
+
 .best-project {
     width: 400px;
     margin: 1rem 0;
@@ -193,21 +240,12 @@ p {
     justify-content: space-between;
 }
 
-/* .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: navy;
-    color: white;
-    text-align: center;
-    z-index: 50;
-} */
-
 .text {
-    margin-left: 1rem;
+    margin: 0 1rem;
 }
 
 #intro {
+    padding: 4rem 0;
     z-index: 0;
 }
 
@@ -402,7 +440,11 @@ nav a:active {
         background-size: cover;
     }
 
-    .fullbox {
+    .imgbox {
+        flex-flow: column wrap;
+    }
+
+    .introbox {
         flex-flow: column wrap;
     }
 
@@ -458,11 +500,19 @@ nav a:active {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .fullbox {
+    .imgbox {
+        flex-flow: row wrap;
+    }
+
+    .introbox {
         flex-flow: row wrap;
     }
 
     .clearbox {
+        flex-flow: column nowrap;
+    }
+
+    .invisibox {
         flex-flow: column nowrap;
     }
 
@@ -489,11 +539,19 @@ nav a:active {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .fullbox {
+    .imgbox {
+        flex-flow: row nowrap;
+    }
+
+    .introbox {
         flex-flow: row nowrap;
     }
 
     .clearbox {
+        flex-flow: row nowrap;
+    }
+
+    .invisibox {
         flex-flow: row nowrap;
     }
 
