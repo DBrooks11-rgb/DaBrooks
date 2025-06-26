@@ -116,7 +116,7 @@ p {
     font-size: 18px;
 }
 
-span,#info {
+#info {
     font-style: italic;
 }
 
@@ -126,7 +126,7 @@ span,#info {
 }
 
 /* BUTTON */
-.button {
+.website-button {
     background-color: var(--merino);
     color: black;
     margin: 1rem;
@@ -143,11 +143,11 @@ span,#info {
     margin: 0;
 }
 
-.button:hover {
+.website-button:hover {
     background-color: gold;
 }
 
-.button:active {
+.website-button:active {
     background-color: var(--teal);
     color: white;
 }
@@ -198,6 +198,10 @@ span,#info {
     margin: 1em auto;
     padding: .5em;
     z-index: 10;
+}
+
+#Projects {
+    margin: 1em auto;
 }
 
 #center {
