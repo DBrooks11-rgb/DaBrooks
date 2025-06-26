@@ -125,7 +125,12 @@ p {
 }
 
 #inside-card {
-    color: black;
+    color: white;
+}
+
+#inside-card a {
+    color: var(--merino);
+    font-weight: bold;
 }
 
 /* BUTTON */
@@ -511,6 +516,11 @@ nav a:active {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: var(--pastelpurple);
+    border-radius: 15%;
+}
+
+.card-body {
+    background-color: navy;
 }
 
 /* MEDIA QUERIES */
