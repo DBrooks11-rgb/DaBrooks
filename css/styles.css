@@ -201,7 +201,7 @@ p {
 }
 
 #Projects {
-    margin: 1em auto;
+    margin-top: 2.5em;
 }
 
 #center {
@@ -481,6 +481,24 @@ nav a:active {
 
 .fallback a:hover {
     text-decoration: underline;
+}
+
+.carousel-caption {
+    color: white;
+    text-shadow: black 1px 0 8px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--darkmagenta);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--pastelpurple);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
 }
 
 /* MEDIA QUERIES */
