@@ -17,12 +17,11 @@ footer {
     --charcoal: #36454F;
     --merino: #f7f1df;
     --gold: gold;
+    --darkgold: #b59410;
     --fuchsia: fuchsia;
     --pastelpurple: #c3b1e1;
-    --coral: #ff4040;
-    /* unused */
     --darkmagenta: #8b008b;
-    --darkgold: #b59410;
+    --coral: #ff4040;
 }
 
 /* IMAGES */
@@ -125,6 +124,10 @@ p {
     margin-top: 3rem;
 }
 
+#inside-card {
+    color: black;
+}
+
 /* BUTTON */
 .website-button {
     background-color: var(--merino);
@@ -204,6 +207,10 @@ p {
     margin-top: 2.5em;
 }
 
+#Descriptions {
+    margin-bottom: 5rem;
+}
+
 #center {
     text-align: center;
 }
@@ -280,6 +287,11 @@ p {
 
 #page {
     text-align: left;
+}
+
+.card-body {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 /* NAVIGATION */
@@ -485,7 +497,7 @@ nav a:active {
 
 .carousel-caption {
     color: white;
-    text-shadow: black 1px 0 8px;
+    text-shadow: black 1px 0 5px;
 }
 
 .carousel-indicators .active {
@@ -498,7 +510,7 @@ nav a:active {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-
+    background-color: var(--pastelpurple);
 }
 
 /* MEDIA QUERIES */
@@ -525,6 +537,10 @@ nav a:active {
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
+
+    .card-body {
+    flex-flow: row wrap;
+}
 
     #best {
         width: 225px;
@@ -561,6 +577,10 @@ nav a:active {
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
+
+    .card-body {
+    flex-flow: row wrap;
+}
 
     .invisibox {
         flex-flow: row nowrap;
@@ -672,6 +692,10 @@ nav a:active {
         flex-flow: row wrap;
     }
 
+    .card-body {
+    flex-flow: row wrap;
+}
+
     h1 {
         font-size: 55px;
     }
@@ -743,4 +767,8 @@ nav a:active {
         width: 300px;
         height: 450px;
     }
+
+    .card-body {
+    flex-flow: row nowrap;
+}
 }
