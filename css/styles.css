@@ -151,6 +151,7 @@ figcaption {
     background-color: var(--merino);
     color: black;
     margin: .8rem;
+    border-radius: 8%;
     padding: 12px 18px;
     text-align: center;
     display: inline-block;
