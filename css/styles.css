@@ -137,12 +137,12 @@ p {
 .website-button {
     background-color: var(--merino);
     color: black;
-    margin: 1rem;
-    padding: 12px 28px;
+    margin: .8rem;
+    padding: 12px 18px;
     text-align: center;
     display: inline-block;
     font-family: "Faculty Glyphic", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     box-shadow: 5px 5px black, -5px -5px white;
     z-index: 10;
 }
@@ -564,6 +564,11 @@ nav a:active {
     h1 {
         font-size: 52px;
     }
+    .website-button {
+    margin: .8rem;
+    padding: 12px 24px;
+    font-size: 12px;
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -633,6 +638,12 @@ nav a:active {
     .box {
         margin: 3rem 3rem 0 3rem;
     }
+
+    .website-button {
+    margin: .8rem;
+    padding: 12px 24px;
+    font-size: 14px;
+}
 }
 
 /* For menu transition (handheld mode)*/
@@ -704,6 +715,12 @@ nav a:active {
 
     .card-body {
     flex-flow: row wrap;
+}
+
+.website-button {
+    margin: 1rem;
+    padding: 12px 28px;
+    font-size: 14px;
 }
 
     h1 {
