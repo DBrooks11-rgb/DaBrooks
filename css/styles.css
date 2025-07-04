@@ -12,12 +12,14 @@ footer {
 :root {
     --teal: teal;
     --navy: navy;
+    --skyblue: skyblue;
     --black: black;
     --white: white;
     --charcoal: #36454F;
     --merino: #f7f1df;
     --gold: gold;
     --darkgold: #b59410;
+    --pastelyellow: #FDFD96;
     --fuchsia: fuchsia;
     --pastelpurple: #c3b1e1;
     --darkmagenta: #8b008b;
@@ -46,8 +48,8 @@ img {
 }
 
 #verticalimg {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 375px;
 }
 
 .invisibox img {
@@ -63,10 +65,11 @@ img {
 
 /* TEXT */
 
-p,
+
 h1,
 h2,
-h3 {
+h3,
+p {
     color: white;
     font-family: "Faculty Glyphic", sans-serif;
     font-weight: 400;
@@ -110,6 +113,11 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+figcaption {
+    color: var(--merino);
+    font-size: 10px;
+}
+
 #rest {
     color: black;
     font-size: 18px;
@@ -121,7 +129,8 @@ p {
 
 .title {
     margin: 0 1em;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    color: var(--pastelyellow);
 }
 
 #inside-card {
@@ -131,6 +140,10 @@ p {
 #inside-card a {
     color: var(--merino);
     font-weight: bold;
+}
+
+.aboutbox h3 {
+    margin-top: 3rem;
 }
 
 /* BUTTON */
@@ -149,6 +162,10 @@ p {
 
 #nomargin {
     margin: 0;
+}
+
+#basicmargin {
+    margin: 2rem auto;
 }
 
 .website-button:hover {
@@ -208,6 +225,11 @@ p {
     z-index: 10;
 }
 
+.note a {
+    color: var(--merino);
+    font-weight: bold;
+}
+
 #Projects {
     margin-top: 2.5em;
 }
@@ -223,10 +245,10 @@ p {
 .imgbox {
     position: relative;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     background-color: var(--charcoal);
     border: solid 3px var(--merino);
-    margin: 5rem 5rem 0 5rem;
+    margin: 2rem 5rem;
     padding: 1em;
     z-index: 10;
 }
@@ -254,6 +276,17 @@ p {
     z-index: 10;
 }
 
+.aboutbox {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 2rem auto;
+    border: 2px solid white;
+    padding: 0 auto;
+    background-color: var(--skyblue);
+    z-index: 10;
+}
+
 .invisibox {
     position: relative;
     display: flex;
@@ -261,6 +294,15 @@ p {
     align-items: center;
     flex-flow: column nowrap;
     margin: 0 auto 2rem auto;
+    z-index: 10;
+}
+
+.invisibox-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 2rem;
     z-index: 10;
 }
 
@@ -413,6 +455,10 @@ nav a:active {
     color: var(--pastelpurple);
 }
 
+#active {
+    color: var(--teal);
+}
+
 .menu-button {
     display: none;
     padding: 1.5rem;
@@ -477,6 +523,10 @@ nav a:active {
     top: 0;
     right: 0;
     background-color: red;
+}
+
+hr {
+    margin: 2rem;
 }
 
 #latest_resume {
@@ -700,7 +750,7 @@ nav a:active {
 
 
     .imgbox {
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
 
     .introbox {
@@ -776,6 +826,7 @@ nav a:active {
 
     .imgbox {
         flex-flow: row nowrap;
+        align-items: center;
     }
 
     .clearbox {

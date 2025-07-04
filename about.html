@@ -35,7 +35,8 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li class="branding"><a href="index.html"><img id="logo" src="images/Logo_Transparent.png"></a></li>
+            <li class="branding"><a href="index.html"><img id="logo" src="images/Logo_Transparent.png"
+                        alt="Signature logo"></a></li>
             <li class="menu-button">
                 <span class="open-menu" aria-label="Open main menu"><span
                         class="material-symbols-outlined">menu</span><span class="sr-only">Open main menu</span></span>
@@ -45,7 +46,7 @@
             </li>
             <li class="menu-item"><a href="index.html">Home</a></li>
             <li class="menu-item"><a href="resume.html">Resume</a></li>
-            <li class="menu-item"><a href="about.html">About</a></li>
+            <li class="menu-item"><a href="about.html" id="active">About</a></li>
             <li class="menu-item"><a href="projects.html">Projects</a></li>
             <li class="menu-item"><a href="contacts.html">Contact</a></li>
         </ul>
@@ -60,22 +61,90 @@
                 <h2 class="title">About Me</h2>
                 <article>
                     <section class="box" id="center">
-                        <p>Everyone&rsquo;s story is unique, and I am no exception.
-                            There were plenty of ups and downs in my life that have
-                            helped me become the strong, resilient self that
-                            I am today, and have prepared me for whatever challenges
-                            are ahead. And in those challenges were some notable
-                            achievements that I&rsquo;m proud to have written down.
-                        </p>
+                        <p>I was always interested in technology, from video games
+                                to computers and coding. Ever since high school,
+                                it felt like my destiny was a degree in Computer Science.
+                                <br>
+                                In a way, I suppose I still obtained the knowledge.
+                                But why switch to Informatics, and what exactly does it 
+                                mean for me as a person? 
+                            </p>
                     </section>
-                    <h3>Uhhh...</h3>
-                    <section class="clearbox">
-                        <div class="box">
-                            <p>Pretend I sound confident here.</p>
+
+                    <section class="aboutbox">
+                        <h3>Me?...Me!</h3>
+                        <div class="box" id="center">
+                            <p>
+                            Born and raised in Indiana, technology was always around me.
+                            I like being curious about things I don&rsquo;t know, even
+                            when it doesn&rsquo;t always spark my interest. Although, 
+                            sometimes it&rsquo;s better to hear things from someone else 
+                            rather than doing things yourself. I&rsquo;ve had to
+                            learn this lesson time and time again as I 
+                            started developing qualities to lead and take action.
+                        </p>
+                        <p>Learning to be flexible is another big lesson
+                            that I believe holds true to this day.
+                            Life hasn&rsquo;t gone the way I always thought it would, 
+                            but you learn to make the most of it.
+                            Going through many unique times in life,
+                            I&rsquo;ve learned alot about things that often
+                            labelled me "wiser" beyond my age, even though
+                            I never thought I was back then.
+                            <br><br>
+                            Personally, I think everyone is smart in their own way, but
+                            we can&rsquo;t always explain how. We&rsquo;re all 
+                            normal people after all, just with different perspectives.
+                        </p>
+                        </div>
+
+                        <h3>Why Informatics?</h3>
+                        <div class="imgbox">
+                            <figure>
+                                <img id="verticalimg" src="images/Informatics_example.png"
+                                    alt="Sketch Drawing of Bridge">
+                                <figcaption>A poorly drawn illustration of Informatics.</figcaption>
+                            </figure>
+
+                            <div class="invisibox-2">
+                                <p>
+                                    With so many paths and
+                                    careers set in stone, I choose one of the newer and
+                                    "easier" degree paths. Although, I don&rsquo;t see Informatics
+                                    as "easy".
+                                    <br>
+                                    Informatics, to me at least, is the bridge between people and technology.
+                                    Not everyone understands technology, and for many of us,
+                                    learning something new isn&rsquo;t always so simple. Futhermore,
+                                    teaching someone a new technology can be difficult in certain
+                                    senerios.
+                                    Without that bridge to better connect people with that technology,
+                                    users get stuck in the dreaded "black box" senerio.
+                                    <br><br>
+                                    I&rsquo;ve been able to meet many Informatics majors throughout college,
+                                    and what I realized is that Informatics is like a
+                                    wild card in a deck of cards. People who know Informatics
+                                    are TALENTED. Coding, making robots with motherboards, sports, making music,
+                                    works of art, and so on. Informatics teaches you that there is
+                                    always another way, even when the cards are against you.
+                                    <br><br>
+                                    Hard to believe right? I had my doubts too, but our four-person
+                                    Informatics Capstone team,
+                                    turned into three-person team midway through the first semester, was praised
+                                    by many judges and rewarded (with money) by our colleages, many of which were
+                                    Computer Science majors (who also had impressive projects of course).
+                                </p>
+                                <div class="note">
+                                    <p>Be sure to check out our
+                                        <a href="https://zion.luddy.indiana.edu/info-capstone-2025/cloud9">Cloud9
+                                            Project!</a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </article>
-                
+
                 <!-- Footer -->
                 <!-- If footer is placed outside main, it will NOT appear -->
 
@@ -83,12 +152,12 @@
                     <div class="container py-4">
                         <div class="row my-4">
                             <div class="col mb-3 text-start">
-                                <img id="footimg" src="images/DB_Logo.png">
+                                <img id="footimg" src="images/DB_Logo.png" alt="Signature logo">
                                 <p class="mb-1">&copy; 2025 David Brooks.</p>
                             </div>
                             <div class="col mb-3 text-end">
                                 <h3>Contacts:</h3>
-                                <div class="container py-4" id="readable">
+                                <div class="container py-4">
                                     <p>Phone: 317-363-0122</p>
                                     <p>Email: dab990022@gmail.com</p>
                                 </div>
@@ -102,6 +171,7 @@
                                 </a>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </footer>
             </div>
