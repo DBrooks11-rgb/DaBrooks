@@ -26,7 +26,9 @@ footer {
     --coral: #ff4040;
 }
 
-/* IMAGES */
+/************************************************************************************************************/
+/* IMAGES */ 
+/************************************************************************************************************/
 
 img {
     width: 500px;
@@ -63,8 +65,9 @@ img {
     border-radius: 50%;
 }
 
-/* TEXT */
-
+/************************************************************************************************************/
+/* TEXT */ 
+/************************************************************************************************************/
 
 h1,
 h2,
@@ -146,7 +149,10 @@ figcaption {
     margin-top: 3rem;
 }
 
-/* BUTTON */
+/************************************************************************************************************/
+/* BUTTONS */ 
+/************************************************************************************************************/
+
 .website-button {
     background-color: var(--merino);
     color: black;
@@ -178,7 +184,9 @@ figcaption {
     color: white;
 }
 
-/* BACKGROUND */
+/************************************************************************************************************/
+/* BACKGROUND */ 
+/************************************************************************************************************/
 
 #home {
     background-image: url("../images/business-background.png");
@@ -193,7 +201,9 @@ figcaption {
     /* border: 2px solid red; */
 }
 
-/* CONTAINERS */
+/************************************************************************************************************/
+/* CONTAINERS */ 
+/************************************************************************************************************/
 
 .content-container {
     margin: 0 auto;
@@ -308,6 +318,12 @@ figcaption {
     z-index: 10;
 }
 
+#modalbox {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
 .best-project {
     width: auto;
     margin: 1rem 0;
@@ -342,7 +358,9 @@ figcaption {
     flex-flow: column nowrap;
 }
 
-/* NAVIGATION */
+/************************************************************************************************************/
+/* NAVIGATION */ 
+/************************************************************************************************************/
 
 .sr-only {
     position: absolute;
@@ -471,13 +489,15 @@ nav a:active {
     cursor: pointer;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Pushes the page content to the right when you open side navigation */
 /* main {
     transition: margin-left .5s;
     padding: 0;
 } */
 
-/* ANIMATION */
+/************************************************************************************************************/
+/* ANIMATION */ 
+/************************************************************************************************************/
 
 .star {
     position: absolute;
@@ -516,8 +536,86 @@ nav a:active {
         opacity: 0;
     }
 }
+/************************************************************************************************************/
+/* MODAL */ 
+/************************************************************************************************************/
 
-/* OTHER */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 2rem;
+}
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: all 0.2s;
+}
+.card img {
+    width: 100%;
+}
+.card h2 {
+    color: black;
+    font-size: 36px;
+}
+.card:hover {
+    border: 1px solid white;
+    background-color: rgb(254, 217, 223);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.modal-outer {
+    display: grid;
+    background: rgba(237, 237, 237, 0.7);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    /* Hide this modal until we need it */
+    pointer-events: none;
+}
+.modal-outer.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-inner {
+    max-width: 600px;
+    min-width: 400px;
+    padding: 2rem;
+    border-radius: 6px;
+    min-height: 200px;
+    background: white;
+    box-shadow: 1px 1px 1px lightgrey;
+}
+.modal-outer.open .modal-inner {
+    transform: translateY(0);
+}
+.modal-desc {
+    display: flex;
+}
+.modal-img {
+    display: block;
+    min-width: 150px;
+    height: 200px;
+    padding: 1em 0 1em 2em;
+}
+
+/************************************************************************************************************/
+/* OTHER */ 
+/************************************************************************************************************/
+
 .square {
     width: 20px;
     height: 20px;
@@ -574,8 +672,9 @@ hr {
     background-color: navy;
 }
 
+/************************************************************************************************************/
 /* MEDIA QUERIES */
-/* Default settings for size less than 576px*/
+/************************************************************************************************************/
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -846,6 +945,10 @@ hr {
     .best-project {
         border: 0;
     }
+
+    #modalbox {
+    flex-flow: column nowrap;
+}
 
     #best {
         width: 175px;
