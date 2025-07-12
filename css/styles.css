@@ -542,12 +542,13 @@ nav a:active {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1.5rem;
     padding: 2rem;
 }
 .card {
     background: white;
+    height: 500px;
     padding: 1rem;
     border-radius: 6px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
@@ -559,10 +560,11 @@ nav a:active {
 }
 .card img {
     width: 100%;
+    height: 80%;
 }
 .card h2 {
     color: black;
-    font-size: 36px;
+    font-size: 30px;
 }
 .card:hover {
     border: 1px solid white;
