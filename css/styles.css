@@ -318,12 +318,6 @@ figcaption {
     z-index: 10;
 }
 
-#modalbox {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-}
-
 .best-project {
     width: auto;
     margin: 1rem 0;
@@ -351,11 +345,6 @@ figcaption {
 
 #page {
     text-align: left;
-}
-
-.card-body {
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 /************************************************************************************************************/
@@ -548,7 +537,8 @@ nav a:active {
 }
 .card {
     background: white;
-    height: 500px;
+    height: 200px;
+    width: 80%;
     padding: 1rem;
     border-radius: 6px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
@@ -560,11 +550,12 @@ nav a:active {
 }
 .card img {
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 .card h2 {
+    visibility: hidden;
     color: black;
-    font-size: 30px;
+    font-size: 24px;
 }
 .card:hover {
     border: 1px solid white;
@@ -674,6 +665,10 @@ hr {
     background-color: navy;
 }
 
+.close-modal {
+    cursor: pointer;
+}
+
 /************************************************************************************************************/
 /* MEDIA QUERIES */
 /************************************************************************************************************/
@@ -700,10 +695,6 @@ hr {
         justify-content: space-evenly;
     }
 
-    .card-body {
-    flex-flow: row wrap;
-}
-
     #best {
         width: 225px;
         height: 300px;
@@ -720,6 +711,13 @@ hr {
     margin: .8rem;
     padding: 12px 24px;
     font-size: 12px;
+}
+
+.cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+    height: 250px;
 }
 }
 
@@ -744,10 +742,6 @@ hr {
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
-
-    .card-body {
-    flex-flow: row wrap;
-}
 
     .invisibox {
         flex-flow: row nowrap;
@@ -795,6 +789,11 @@ hr {
     margin: .8rem;
     padding: 12px 24px;
     font-size: 14px;
+}
+
+.card {
+    height: 300px;
+    width: 100%;
 }
 }
 
@@ -865,8 +864,19 @@ hr {
         flex-flow: row wrap;
     }
 
-    .card-body {
-    flex-flow: row wrap;
+.cards {
+    grid-gap: 1.5rem;
+}
+.card {
+    height: 350px;
+}
+.card img {
+    width: 100%;
+    height: 80%;
+}
+.card h2 {
+    visibility: visible;
+    font-size: 24px;
 }
 
 /* .website-button {
@@ -897,6 +907,13 @@ hr {
         width: 325px;
         height: 400px;
     }
+
+    .card {
+    height: 400px;
+}
+.card h2 {
+    font-size: 24px;
+}
 
     @keyframes animate {
         0% {
@@ -948,16 +965,18 @@ hr {
         border: 0;
     }
 
-    #modalbox {
-    flex-flow: column nowrap;
-}
-
     #best {
         width: 175px;
         height: 250px;
     }
-
-    .card-body {
-    flex-flow: row nowrap;
+    
+.cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+    height: 400px;
+}
+.card h2 {
+    font-size: 28px;
 }
 }

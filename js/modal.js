@@ -13,6 +13,7 @@ const beatles = {
                     design aspects after collecting input from real experts in medical and
                     UX design positions. This project required much time and effort to make
                     it a reality, but I&rsquo;m very proud of how it came out in the end.`,
+        link: "https://zion.luddy.indiana.edu/info-capstone-2025/cloud9",
     },
     airport: {
         name: 'U.S. Airport Efficiency',
@@ -23,6 +24,7 @@ const beatles = {
                     many people overlook. This tableau project aims to put my data analyst 
                     skills to the test and display visualizations that tell the audience 
                     useful information and an impactful story.`,
+        link: "https://public.tableau.com/app/profile/david.brooks4031/viz/AirportProject_17297303787400/Story",
     },
     sleepwell: {
         name: 'SleepWell',
@@ -33,6 +35,7 @@ const beatles = {
                     design aspects for the app and Mukund&rsquo;s polish, we created a strong
                     demonstration of an interface that can be intergraded into a real-life
                     system.`,
+        link: "https://www.figma.com/proto/WlssZAC68FAESNG5Eednb2/Mobile-wearable---app-proto?node-id=0-1&t=mKUWshCBHCFFUJ5U-1",
     },
     inventory: {
         name: 'Integrating Inventory',
@@ -42,6 +45,7 @@ const beatles = {
                     in their inventory, with a multitude of parameters. This project had me 
                     and my team communicating with many army members, all of which have 
                     different perspectives and needs for our prototype program to be a success.`,
+        link: "",
     },
     arduino: {
         name: 'Arduino Christmas Tree',
@@ -52,6 +56,7 @@ const beatles = {
                     using Fusion 360, while Niki was in charge of the circuits and the 
                     lights. We both had a hand at the code, and we finished with a simple, 
                     yet compelling masterpiece.`,
+        link: "",
     },
 };
 
@@ -80,10 +85,26 @@ function openModal(event) {
     let data = beatles[firstName];
     //format unsing html
     let html = `
+    <span class="close-modal" aria-label="Close modal">
+    <span class="material-symbols-outlined">close</span>
+    <span class="sr-only">Close main menu</span></span>
 <h2 style="color:black">${data.name}</h2>
 <div class="modal-desc">
-    <p style="color:black">${data.bio}</p>
-    <img class="modal-img" src="${data.image}" alt="${data}" />
+    <p style="color:black">${data.bio}
+`;
+
+    //If card has link, add to p before closing
+    if (data.link != "") {
+        html += `
+    <br><br>
+    <a href="${data.link}">Link</a>
+    `;
+    }
+
+    //Close modal-desc
+    html += `
+    </p>
+    <img class="modal-img" src="${data.image}" alt="${data}"/>
 </div>
 `;
     //reset inner to nothing
@@ -92,6 +113,8 @@ function openModal(event) {
     document.querySelector('.modal-inner').insertAdjacentHTML('afterbegin', html);
     //display modal
     document.querySelector('.modal-outer').classList.add('open');
+    //if "X" is pressed, close modal
+    document.querySelector('.close-modal').addEventListener('click', closeModal);
 }
 
 function closeModal(event) {
@@ -102,13 +125,18 @@ function closeModal(event) {
     //else, don't
     // console.log("outer", event.target.closest('.model-outer'));
     // console.log("inner", event.target.closest('.model-inner'));
-
-    if (event.target.closest('.modal-inner')) {
-        console.log("INNER");
+    if (event.target.closest('.close-modal')) {
+        console.log("X");
+        document.querySelector('.modal-outer').classList.remove('open');
     }
     else {
-        console.log("OUTER");
-        document.querySelector('.modal-outer').classList.remove('open');
+        if (event.target.closest('.modal-inner')) {
+            console.log("INNER");
+        }
+        else {
+            console.log("OUTER");
+            document.querySelector('.modal-outer').classList.remove('open');
+        }
     }
 }
 
