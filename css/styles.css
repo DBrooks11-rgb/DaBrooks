@@ -59,9 +59,15 @@ img {
     border: 2px solid var(--merino);
 }
 
-#footimg {
+/* #footimg {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
+} */
+
+#contactimg {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
 }
 

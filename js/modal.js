@@ -97,7 +97,8 @@ function openModal(event) {
     if (data.link != "") {
         html += `
     <br><br>
-    <a href="${data.link}">Link</a>
+    <a href="${data.link}">Click Here</a>
+    to view more.
     `;
     }
 
