@@ -312,6 +312,7 @@ figcaption {
     align-items: center;
     flex-flow: column nowrap;
     margin: 0 auto 2rem auto;
+    padding: 1rem;
     z-index: 10;
 }
 
@@ -591,8 +592,9 @@ nav a:active {
 }
 .modal-inner {
     max-width: 600px;
-    min-width: 400px;
+    min-width: 300px;
     padding: 2rem;
+    padding-top: 5rem;
     border-radius: 6px;
     min-height: 200px;
     background: white;
@@ -673,6 +675,10 @@ hr {
 
 .close-modal {
     cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--fuchsia);
 }
 
 /************************************************************************************************************/
@@ -795,6 +801,10 @@ hr {
     margin: .8rem;
     padding: 12px 24px;
     font-size: 14px;
+}
+
+.modal-inner {
+    padding-top: 2rem;
 }
 
 .card {

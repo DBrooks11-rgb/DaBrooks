@@ -1,40 +1,47 @@
 'use strict';
 
 // JS
-const beatles = {
+const projects = {
     cloud9: {
         name: 'Cloud9',
         image: "images/Cloud9_TitleFrame.png",
         bio: `My 2025 Capstone Project: Cloud9 is a web platform that focuses
                     on providing tools and resources to help those facing addiction to nicotine.
                     I worked with Camilla Clark and Kevin Trancong to create a fully functional
-                    site that works with an SQL database and integrated Google API systems.
-                    I helped with back-end design, as well as extra input for front-end
+                    site that works with an SQL database and integrates Google API systems.
+                    <br>
+                    I worked mainly with the back-end design, as well as extra input for the front-end
                     design aspects after collecting input from real experts in medical and
-                    UX design positions. This project required much time and effort to make
-                    it a reality, but I&rsquo;m very proud of how it came out in the end.`,
+                    UX design positions. I was in charge of developing the discussion board 
+                    feature, allowing users to communicate and connect. This project required 
+                    much time and effort to make it a reality, but I&rsquo;m very proud of 
+                    how it came out in the end.`,
         link: "https://zion.luddy.indiana.edu/info-capstone-2025/cloud9",
     },
     airport: {
         name: 'U.S. Airport Efficiency',
         image: "images/US_Airport_Tableau_Cover.png",
         bio: `I find myself wanting to travel more nowadays, and planes are 
-                    one of the biggest ways to travel today. But of course, airports aren’t 
+                    one of the best ways to travel today. But of course, airports aren&rsquo;t 
                     cheap, and many times, there are lots of costs that go into airports that 
                     many people overlook. This tableau project aims to put my data analyst 
                     skills to the test and display visualizations that tell the audience 
-                    useful information and an impactful story.`,
+                    fascinating information and an impactful story.`,
         link: "https://public.tableau.com/app/profile/david.brooks4031/viz/AirportProject_17297303787400/Story",
     },
     sleepwell: {
         name: 'SleepWell',
         image: "images/Mobile_screenshot.png",
         bio: `One of my older projects. I worked on this mobile app prototype with Mukund Bhat, using Figma.
-                    I designed a 3D printed neckband that would serve to track the user&rsquo;s
-                    sleeping data in a final product. With my initial structure
-                    design aspects for the app and Mukund&rsquo;s polish, we created a strong
-                    demonstration of an interface that can be intergraded into a real-life
-                    system.`,
+                    Our goal was to design a prototype app that focused on guiding users
+                    on how to use a wearable system, thinking of the practical usage and
+                    user reactions from the product. In addition,
+                    I designed a prototype 3D printed neckband that would serve to track the 
+                    user&rsquo;s sleeping data in a final product.
+                    <br>
+                    With my initial structure design aspects for the app and Mukund&rsquo;s 
+                    polish, we created a strong demonstration of an interface that can be 
+                    integrated into a real-life system.`,
         link: "https://www.figma.com/proto/WlssZAC68FAESNG5Eednb2/Mobile-wearable---app-proto?node-id=0-1&t=mKUWshCBHCFFUJ5U-1",
     },
     inventory: {
@@ -42,9 +49,13 @@ const beatles = {
         image: "images/Inventory_Background.png",
         bio: `This project had me working with members of the Army. 
                     The problem involved improving the process of counting ammo and resources 
-                    in their inventory, with a multitude of parameters. This project had me 
-                    and my team communicating with many army members, all of which have 
-                    different perspectives and needs for our prototype program to be a success.`,
+                    in their inventory, with a multitude of parameters. My team and I were
+                    communicating with many army members who all had different perspectives 
+                    and needs for our prototype program to be a success.
+                    <br>
+                    This project was when I truly discovered the business perspectives within 
+                    Informatics, with aspects such as dependencies and beneficiaries coming
+                    into play. It also challenged my ability to communicate more efficiently.`,
         link: "",
     },
     arduino: {
@@ -52,10 +63,14 @@ const beatles = {
         image: "images/Christmas_NightLight.jpg",
         bio: `After seeing so many Arduino projects, I went into trying 
                     it myself, and I had a very fun experience. Niki Movva and I made a fun 
-                    light-up Christmas Tree design. I was in charge of designing the tree 
+                    light-up Christmas Tree design. You can see a sound wave sensor
+                    that senses how far or close someone is and makes the tree lights
+                    change colors. 
+                    <br>
+                    I was in charge of designing the tree 
                     using Fusion 360, while Niki was in charge of the circuits and the 
                     lights. We both had a hand at the code, and we finished with a simple, 
-                    yet compelling masterpiece.`,
+                    yet compelling masterpiece!`,
         link: "",
     },
 };
@@ -79,10 +94,10 @@ function openModal(event) {
     let lastName = current.dataset.lastName;
 
     //match target to data
-    // console.log(beatles.firstName); // NO - no key "firstName"
-    console.log(beatles[firstName]); // YES - understands variables
+    // console.log(projects.firstName); // NO - no "firstName"
+    console.log(projects[firstName]); // YES
     //get data
-    let data = beatles[firstName];
+    let data = projects[firstName];
     //format unsing html
     let html = `
     <span class="close-modal" aria-label="Close modal">
