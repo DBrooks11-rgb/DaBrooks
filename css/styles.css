@@ -267,6 +267,7 @@ figcaption {
 .imgbox {
     position: relative;
     display: flex;
+    align-items: center;
     flex-flow: column nowrap;
     background-color: var(--charcoal);
     border: solid 3px var(--merino);
@@ -806,8 +807,8 @@ hr {
     }
 
     #wideimg {
-        height: 300px;
-        width: 500px;
+        height: 225px;
+        width: 375px;
     }
 
     .invisibox img {
@@ -887,7 +888,6 @@ hr {
         background-color: purple;
     }
 
-
     .imgbox {
         flex-flow: row nowrap;
     }
@@ -896,6 +896,11 @@ hr {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #wideimg {
+        height: 300px;
+        width: 500px;
     }
 
     .clearbox {
