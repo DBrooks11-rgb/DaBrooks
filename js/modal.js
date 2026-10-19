@@ -2,6 +2,25 @@
 
 // JS
 const projects = {
+    aivisual: {
+        name: 'Cloud9',
+        image: "images/presentation.png",
+        bio: `In January 2026, I started my graduate journey, with one of my first projects.
+                    While not as full scale as my other projects, this project helped me understand the importance
+                    of AI within software development, as well as how to use it to it&rsquo;s full potential.
+                    My goal was to find how AI saw a program, how it analyzed it, and how well it can communicate that information
+                    into it&rsquo;s tests and onto actual people.
+                    <br>
+                    I used ChatGPT and Claude AI to build these visuals that would serve as AIs understanding of the code.
+                    I then used ChatGPT to create tests, with as little prompts as possible, until it needed extra guildance to
+                    get what we needed. Claude would serve as an accuracy check, compiling the results into a table, with
+                    measurments of coverage on each version.
+                    <br>
+                    If I were to do this project again, I would use an extra AI software like Google Gemini to further explore
+                    AI&rsquo;s capabilities as a whole. I would also like to provide the prompts used for each iteration of tests
+                    to further emphasize the importance of prompt engineerring.`,
+        link: "https://canva.link/7u3g4xa07k0w06d",
+    },
     cloud9: {
         name: 'Cloud9',
         image: "images/Cloud9_TitleFrame.png",
