@@ -3,7 +3,7 @@
 // JS
 const projects = {
     aivisual: {
-        name: 'Cloud9',
+        name: 'AI Visual Communication in Software Testing',
         image: "images/presentation.png",
         bio: `In January 2026, I started my graduate journey, with one of my first projects.
                     While not as full scale as my other projects, this project helped me understand the importance
